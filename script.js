@@ -95,3 +95,22 @@ const eseguiEferma = (messaggio, intervallo, tempoStop) => {
 }
 
 eseguiEferma("Snack 7", 1000, 3000);
+
+// SNACK 8
+// Scrivi una funzione contoAllaRovescia che accetta un numero n e stampa il conto alla rovescia da n a 0, con un intervallo di 1 secondo tra ogni numero.
+// Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer.
+const contoAllaRovescia = (numero) => {
+    const id = setInterval(() => {
+        if (numero > 0) {
+            console.log(numero)
+            numero--;
+        } else {
+            clearInterval(id)
+            console.log("Tempo scaduto!")
+        }
+    }, 1000)
+}
+
+contoAllaRovescia(5);
+
+// SNACK 9
