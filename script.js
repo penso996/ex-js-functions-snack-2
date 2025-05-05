@@ -27,3 +27,17 @@ console.log(sommaArrow(1, 2));
 const quadrato = (numero) => numero * numero;
 
 console.log(quadrato(5));
+
+// SNACK 3
+// Definisci una funzione eseguiOperazione che accetta tre parametri:
+// due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+const sottrazione = (numero1, numero2) => numero1 - numero2;
+const resto = (numero1, numero2) => numero1 % numero2;
+
+const eseguiOperazione = (numero1, numero2, operazione) => {
+    return operazione(numero1, numero2);
+}
+
+console.log(eseguiOperazione(4, 2, sottrazione));
+console.log(eseguiOperazione(5, 2, resto));
+
