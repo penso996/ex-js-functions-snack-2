@@ -21,3 +21,9 @@ console.log(sommaAnonima(2, 4));
 const sommaArrow = (numero1, numero2) => numero1 + numero2;
 
 console.log(sommaArrow(1, 2));
+
+// SNACK 2
+// Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
+const quadrato = (numero) => numero * numero;
+
+console.log(quadrato(5));
