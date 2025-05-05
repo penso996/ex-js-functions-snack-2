@@ -52,3 +52,12 @@ const creaTimer = (tempo) => {
 creaTimer(1000);
 
 // SNACK 5
+// Definisci una funzione che accetta un messaggio e lo stampa ogni secondo.
+// Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
+const messaggioTemporizzato = (messaggio) => {
+    setInterval(() => {
+        console.log(messaggio)
+    }, 1000)
+}
+
+messaggioTemporizzato("Snack 5");
