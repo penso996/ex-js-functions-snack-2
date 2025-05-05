@@ -67,10 +67,12 @@ messaggioTemporizzato("Snack 5");
 // e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
 const creaContatoreAutomatico = (tempo) => {
     let contatore = 0;
-    setInterval(() => {
+    const id = setInterval(() => {
         if (contatore < 3) {    // Stoppa dopo 3 iterazioni
             contatore++
             console.log(contatore)
+        } else {
+            clearInterval(id)
         }
     }, tempo)
 }
@@ -80,4 +82,16 @@ creaContatoreAutomatico(1000);
 // SNACK 7
 // Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e un tempo di stop.
 // Il messaggio deve essere stampato a intervalli regolari, ma si deve fermare dopo il tempo di stop.
-const 
+const eseguiEferma = (messaggio, intervallo, tempoStop) => {
+    let tempoAttuale = 0;
+    const id = setInterval(() => {
+        if (tempoAttuale < tempoStop) {
+            console.log(messaggio)
+            tempoAttuale += 1000
+        } else {
+            clearInterval(id)
+        }
+    }, intervallo)
+}
+
+eseguiEferma("Snack 7", 1000, 3000);
