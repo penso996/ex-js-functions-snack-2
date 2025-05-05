@@ -41,3 +41,14 @@ const eseguiOperazione = (numero1, numero2, operazione) => {
 console.log(eseguiOperazione(4, 2, sottrazione));
 console.log(eseguiOperazione(5, 2, resto));
 
+// SNACK 4
+// Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+const creaTimer = (tempo) => {
+    setTimeout(() => {
+        console.log("Tempo scaduto!")
+    }, tempo)
+}
+
+creaTimer(1000);
+
+// SNACK 5
