@@ -4,11 +4,11 @@
 // Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
 // Funzione Dichiarativa
+console.log(sommaDichiarativa(3, 5));
+
 function sommaDichiarativa(numero1, numero2) {
     return numero1 + numero2;
 }
-
-console.log(sommaDichiarativa(3, 5));
 
 // Funzione Anonima
 const sommaAnonima = function (numero1, numero2) {
