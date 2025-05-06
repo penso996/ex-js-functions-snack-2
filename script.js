@@ -114,3 +114,20 @@ const contoAllaRovescia = (numero) => {
 contoAllaRovescia(5);
 
 // SNACK 9
+// Scrivi una funzione sequenzaOperazioni che accetta un array di operazioni (funzioni) e un tempo di intervallo.
+// Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo di intervallo.
+const sequenzaOperazioni = (operazioni, intervallo) => {
+    operazioni.forEach((operazione, indice) => {
+        setTimeout(() => {
+            operazione();
+        }, intervallo * indice)
+    })
+}
+
+const operazioni = [
+    () => console.log("Operazione 1"),
+    () => console.log("Operazione 2"),
+    () => console.log("Operazione 3")
+];
+
+sequenzaOperazioni(operazioni, 1000);
