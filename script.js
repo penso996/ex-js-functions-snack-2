@@ -207,4 +207,26 @@
 
 
 
-// CODE QUESTION 3
+// // CODE QUESTION 3
+// const hamburger = {
+// 	name: "Cheese Burger",
+// 	weight: 250,
+// 	maker: {
+// 		name: "Anonymous Chef",
+// 		restaurant: {
+// 			name: "Hyur's Burgers",
+// 			address: "Main Street, 123",
+// 			isOpen: true,
+// 		},
+// 		age: 29
+// 	}
+// };
+
+// const secondBurger = structuredClone(hamburger);
+// const thirdBurger = structuredClone(hamburger);
+
+// // Vengono creati 9 oggetti in memoria
+
+
+
+// CODE QUESTION 4
