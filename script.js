@@ -284,7 +284,42 @@
 
 
 
-// CODE QUESTION 6
+// // CODE QUESTION 6
+// const chef = {
+//     name: "Chef Hyur",
+//     age: 29,
+//     makeBurger: (num = 1) => {
+//         console.log(`Ecco ${num} hamburger per te!`);
+//     },
+//     restaurant: {
+//         name: "Hyur's Burgers",
+//         welcomeClient: () => {
+//             console.log("Benvenuto!");
+//         },
+//         address: {
+//             street: 'Main Street',
+//             number: 123,
+//             showAddress: () => {
+//                 console.log("Main Street 123");
+//             }
+//         },
+//         isOpen: true,
+//     }
+// }
+
+// const chefCopy = {
+//     ...chef,
+//     restaurant: {
+//         ...chef.restaurant,
+//         address: {
+//             ...chef.restaurant.address
+//         }
+//     }
+// }
+
+
+
+// CODE QUESTION 7
 const chef = {
     name: "Chef Hyur",
     age: 29,
@@ -307,12 +342,20 @@ const chef = {
     }
 }
 
-const chefCopy = {
-    ...chef,
-    restaurant: {
-        ...chef.restaurant,
-        address: {
-            ...chef.restaurant.address
+function deepCopy(obj) {
+    if (typeof obj !== "object") {
+        return obj;
+    }
+    const copy = {};
+    for (const key in obj) {
+        const value = obj[key];
+        if (typeof value !== "object") {
+            copy[key] = value;
+        } else {
+            copy[key] = deepCopy(value);
         }
     }
+    return copy;
 }
+
+const chefCopy = deepCopy(chef);
