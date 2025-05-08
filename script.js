@@ -229,28 +229,55 @@
 
 
 
-// CODE QUESTION 4
-const chef = {
-    name: "Chef Hyur",
-    age: 29,
-    makeBurger: (num = 1) => {
-        console.log(`Ecco ${num} hamburger per te!`);
-    },
-}
+// // CODE QUESTION 4
+// const chef = {
+//     name: "Chef Hyur",
+//     age: 29,
+//     makeBurger: (num = 1) => {
+//         console.log(`Ecco ${num} hamburger per te!`);
+//     },
+// }
 
-const restaurant = {
-    name: "Hyur's Burgers",
-    address: {
-        street: 'Main Street',
-        number: 123,
-    },
-    openingDate: new Date(2025, 3, 11),
-    isOpen: false,
-};
+// const restaurant = {
+//     name: "Hyur's Burgers",
+//     address: {
+//         street: 'Main Street',
+//         number: 123,
+//     },
+//     openingDate: new Date(2025, 3, 11),
+//     isOpen: false,
+// };
 
-// Il miglior metodo per clonare l'oggetto chef è lo spread operator, perchè contiene una funzione e non ci sono oggetti annidati all'interno
-// Il miglior metodo per clonare l'oggetto restaurant è lo structured clone perchè è un oggetto con proprietà complesse ma privo di funzioni
+// // Il miglior metodo per clonare l'oggetto chef è lo spread operator, perchè contiene una funzione e non ci sono oggetti annidati all'interno
+// // Il miglior metodo per clonare l'oggetto restaurant è lo structured clone perchè è un oggetto con proprietà complesse ma privo di funzioni
 
 
 
 // CODE QUESTION 5
+const hamburger = {
+    name: "Cheese Burger",
+    weight: 250,
+    maker: {
+        name: "Anonymous Chef",
+        restaurant: {
+            name: "Hyur's Burgers",
+            address: "Main Street, 123",
+            isOpen: true,
+        },
+        age: 29
+    }
+};
+
+const newRestaurant = { ...hamburger.maker.restaurant };
+newRestaurant.name = "Hyur's II";
+newRestaurant.address = "Second Street, 12";
+const secondBurger = { ...hamburger };
+secondBurger.maker.restaurant = newRestaurant;
+secondBurger.maker.name = "Chef Hyur";
+
+console.log(hamburger.maker.name); // Chef Hyur
+console.log(secondBurger.maker.name); // Chef Hyur
+console.log(hamburger.maker.restaurant.name); // Hyur's II
+console.log(secondBurger.maker.restaurant.name); // Hyur's II
+
+// Vengono creati 5 oggetti
