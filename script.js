@@ -230,3 +230,27 @@
 
 
 // CODE QUESTION 4
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+}
+
+const restaurant = {
+    name: "Hyur's Burgers",
+    address: {
+        street: 'Main Street',
+        number: 123,
+    },
+    openingDate: new Date(2025, 3, 11),
+    isOpen: false,
+};
+
+// Il miglior metodo per clonare l'oggetto chef è lo spread operator, perchè contiene una funzione e non ci sono oggetti annidati all'interno
+// Il miglior metodo per clonare l'oggetto restaurant è lo structured clone perchè è un oggetto con proprietà complesse ma privo di funzioni
+
+
+
+// CODE QUESTION 5
